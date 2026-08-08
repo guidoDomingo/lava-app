@@ -1,0 +1,14 @@
+@props(['name' => 'sparkles', 'class' => ''])
+@php($icons = [
+ 'sparkles' => '<path d="m12 3-1.6 4.9L5.5 9.5l4.9 1.6L12 16l1.6-4.9 4.9-1.6-4.9-1.6L12 3Z"/><path d="m19 15-.7 2.3L16 18l2.3.7L19 21l.7-2.3L22 18l-2.3-.7L19 15Z"/>',
+ 'arrow' => '<path d="M5 12h14M13 6l6 6-6 6"/>',
+ 'check' => '<path d="m5 12 4 4L19 6"/>',
+ 'bag' => '<path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/>',
+ 'shirt' => '<path d="m8 4 4 3 4-3 4 4-3 3v9H7v-9L4 8l4-4Z"/>',
+ 'clock' => '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ 'heart' => '<path d="M20.8 8.1c0 5-8.8 10.4-8.8 10.4S3.2 13.1 3.2 8.1A4.2 4.2 0 0 1 12 5.6a4.2 4.2 0 0 1 8.8 2.5Z"/>',
+ 'pin' => '<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+ 'phone' => '<path d="M7 3h3l1.5 4-2 1.5a14 14 0 0 0 6 6l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C10.2 19 5 13.8 5 7c0-1.1.9-2 2-2Z"/>',
+ 'mail' => '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+])
+<svg {{ $attributes->merge(['class' => $class . ' shrink-0', 'fill' => 'none', 'stroke' => 'currentColor', 'stroke-width' => '1.8', 'viewBox' => '0 0 24 24', 'aria-hidden' => 'true']) }}>{!! $icons[$name] ?? $icons['sparkles'] !!}</svg>
