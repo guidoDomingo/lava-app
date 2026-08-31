@@ -7,6 +7,26 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
     --font-display: Georgia, 'Times New Roman', serif;
+    --color-sky-50: #f7f4ec;
+    --color-sky-100: #e9edf4;
+    --color-sky-200: #cbd7e7;
+    --color-sky-300: #9cb4d2;
+    --color-sky-400: #5f87b7;
+    --color-sky-500: #235f9f;
+    --color-sky-600: #124b8a;
+    --color-sky-700: #0b3d76;
+    --color-sky-800: #093466;
+    --color-sky-900: #082c56;
+    --color-sky-950: #061f42;
 }
 
-@layer base { body { @apply selection:bg-sky-200 selection:text-slate-950; } }
+@layer base {
+    body {
+        @apply selection:bg-sky-200 selection:text-sky-950;
+        background-color: #fdfcf8;
+    }
+}
+
+@layer utilities {
+    .bg-slate-950 { background-color: var(--color-sky-950); }
+}
